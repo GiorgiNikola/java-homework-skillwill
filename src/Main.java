@@ -7,14 +7,14 @@ public class Main {
         double num3 = 5;
         double num4 = 305;
 
-        System.out.println(meanOfFourNumbers(num1, num2, num3, num4));
+        System.out.println(averageOfFourNumbers(num1, num2, num3, num4));
 
         double num5 = 52;
         double num6 = 3;
         double num7 = 3000;
         double num8 = 486;
 
-        System.out.println(meanOfFourNumbers(num5, num6, num7, num8));
+        System.out.println(averageOfFourNumbers(num5, num6, num7, num8));
 
         String a = "something";
         String b = "anything";
@@ -33,7 +33,7 @@ public class Main {
     *  რადგან გვინდა საშუალოს გამოთვლა საჭიროა ისეთი დეითა ტაიპის
     *  გამოყენება რომელსაც მთელი ნაწილიც აქვს და წილადიც ამიტომ პარამეტრად გადავცემთ დაბლს
     * */
-    public static double meanOfFourNumbers(double a, double b, double c, double d) {
+    public static double averageOfFourNumbers(double a, double b, double c, double d) {
         return (a + b + c + d) / 4;
     }
 
