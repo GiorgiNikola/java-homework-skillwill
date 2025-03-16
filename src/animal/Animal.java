@@ -3,17 +3,17 @@ package src.animal;
 public class Animal {
     private String name;
     private int age;
-    private String color;
-    private String gender;
-    private int weight;
+    private boolean isColdBlooded;
+    private char gender;
+    private double weight;
 
     public Animal() {
     }
 
-    public Animal(String name, int age, String color, String gender, int weight) {
+    public Animal(String name, int age, boolean isColdBlooded, char gender, double weight) {
         this.name = name;
         this.age = age;
-        this.color = color;
+        this.isColdBlooded = isColdBlooded;
         this.gender = gender;
         this.weight = weight;
     }
@@ -34,27 +34,27 @@ public class Animal {
         this.age = age;
     }
 
-    public String getColor() {
-        return color;
+    public boolean isColdBlooded() {
+        return isColdBlooded;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setColdBlooded(boolean coldBlooded) {
+        isColdBlooded = coldBlooded;
     }
 
-    public String getGender() {
+    public char getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(char gender) {
         this.gender = gender;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 }

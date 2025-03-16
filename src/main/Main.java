@@ -7,24 +7,26 @@ public class Main {
         Animal dog = new Animal();
         dog.setName("Dogo");
         dog.setAge(4);
-        dog.setColor("Black");
-        dog.setGender("Male");
-        dog.setWeight(30);
+        dog.setColdBlooded(false);
+        dog.setGender('M');
+        dog.setWeight(30.24);
 
-        System.out.println(dog.getName());
-        System.out.println(dog.getAge());
-        System.out.println(dog.getColor());
-        System.out.println(dog.getGender());
-        System.out.println(dog.getWeight());
+        System.out.println("Animal 1");
+        printAnimal(dog);
 
         System.out.println();
 
-        Animal cat = new Animal("Kata", 7, "White", "Female", 20);
+        Animal cat = new Animal("Kata", 7, true, 'F', 20.6);
 
-        System.out.println(cat.getName());
-        System.out.println(cat.getAge());
-        System.out.println(cat.getColor());
-        System.out.println(cat.getGender());
-        System.out.println(cat.getWeight());
+        System.out.println("Animal 2");
+        printAnimal(cat);
+    }
+
+    private static void printAnimal(Animal animal) {
+        System.out.println("Animal name: " + animal.getName());
+        System.out.println("Animal age: " + animal.getAge());
+        System.out.println("Is animal cold blooded: " + animal.isColdBlooded());
+        System.out.println("Animal gender: " + animal.getGender());
+        System.out.println("Animal weight: " + animal.getWeight());
     }
 }
