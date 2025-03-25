@@ -1,44 +1,51 @@
 package src;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        double num1 = 10;
-        double num2 = 14;
-        double num3 = 5;
-        double num4 = 305;
+        ArrayList<String> stringList = new ArrayList<>();
+        stringList.add("Java");
+        stringList.add("Python");
+        stringList.add("C++");
+        stringList.add("Kotlin");
+        stringList.add("Ruby");
+        stringList.add("Ocaml");
+        stringList.add("JavaScript");
+        stringList.add("C#");
+        stringList.add("PHP");
+        stringList.add("Cobol");
 
-        System.out.println(averageOfFourNumbers(num1, num2, num3, num4));
+        for (String word : stringList) {
+            System.out.println(word);
+        }
+        System.out.println();
 
-        double num5 = 52;
-        double num6 = 3;
-        double num7 = 3000;
-        double num8 = 486;
+        ArrayList<Integer> listA = new ArrayList<>();
+        listA.add(7);
+        listA.add(4);
+        listA.add(5);
 
-        System.out.println(averageOfFourNumbers(num5, num6, num7, num8));
+        ArrayList<Integer> listB = new ArrayList<>();
+        listB.add(8);
+        listB.add(3);
+        listB.add(5);
 
-        String a = "something";
-        String b = "anything";
-        String c = "nothing";
-
-        System.out.println(lengthOfThreeStrings(a, b, c));
-
-        String d = "monday";
-        String e = "tuesday";
-        String f = "wednesday";
-
-        System.out.println(lengthOfThreeStrings(d, e, f));
+        System.out.println("The maximum is: " + listsMax(listA, listB));
     }
 
-    /*
-    *  რადგან გვინდა საშუალოს გამოთვლა საჭიროა ისეთი დეითა ტაიპის
-    *  გამოყენება რომელსაც მთელი ნაწილიც აქვს და წილადიც ამიტომ პარამეტრად გადავცემთ დაბლს
-    * */
-    public static double averageOfFourNumbers(double a, double b, double c, double d) {
-        return (a + b + c + d) / 4;
-    }
-
-    // თითოეული სტრინგის სიგრძის გასაგებად ვიყენებთ ჩაშენებულ მეთოდს
-    public static int lengthOfThreeStrings(String a, String b, String c) {
-        return a.length() + b.length() + c.length();
+    public static int listsMax(ArrayList<Integer> list1, ArrayList<Integer> list2) {
+        int max = Integer.MIN_VALUE;
+        for (Integer integer : list1) {
+            if (integer > max) {
+                max = integer;
+            }
+        }
+        for (Integer integer : list2) {
+            if (integer > max) {
+                max = integer;
+            }
+        }
+        return max;
     }
 }
