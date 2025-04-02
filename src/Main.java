@@ -2,43 +2,20 @@ package src;
 
 public class Main {
     public static void main(String[] args) {
-        double num1 = 10;
-        double num2 = 14;
-        double num3 = 5;
-        double num4 = 305;
+        int num = parseStringToInteger("724");
+        int num1 = parseStringToInteger("5215");
+        System.out.println(num);
+        System.out.println(num1);
 
-        System.out.println(averageOfFourNumbers(num1, num2, num3, num4));
-
-        double num5 = 52;
-        double num6 = 3;
-        double num7 = 3000;
-        double num8 = 486;
-
-        System.out.println(averageOfFourNumbers(num5, num6, num7, num8));
-
-        String a = "something";
-        String b = "anything";
-        String c = "nothing";
-
-        System.out.println(lengthOfThreeStrings(a, b, c));
-
-        String d = "monday";
-        String e = "tuesday";
-        String f = "wednesday";
-
-        System.out.println(lengthOfThreeStrings(d, e, f));
+        Car car = new Car("Tesla", "Model 3", 2020, 4);
+        Car car1 = new Car("Toyota", "Camry", 2021, 4);
+        System.out.println(car);
+        System.out.println(car1);
     }
 
-    /*
-    *  რადგან გვინდა საშუალოს გამოთვლა საჭიროა ისეთი დეითა ტაიპის
-    *  გამოყენება რომელსაც მთელი ნაწილიც აქვს და წილადიც ამიტომ პარამეტრად გადავცემთ დაბლს
-    * */
-    public static double averageOfFourNumbers(double a, double b, double c, double d) {
-        return (a + b + c + d) / 4;
+    public static Integer parseStringToInteger(String input) {
+        return Integer.parseInt(input);
     }
 
-    // თითოეული სტრინგის სიგრძის გასაგებად ვიყენებთ ჩაშენებულ მეთოდს
-    public static int lengthOfThreeStrings(String a, String b, String c) {
-        return a.length() + b.length() + c.length();
-    }
+
 }
